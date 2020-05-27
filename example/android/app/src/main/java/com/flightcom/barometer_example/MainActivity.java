@@ -1,0 +1,6 @@
+package com.flightcom.barometer_example;
+
+import io.flutter.embedding.android.FlutterActivity;
+
+public class MainActivity extends FlutterActivity {
+}
