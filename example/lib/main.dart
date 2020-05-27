@@ -14,7 +14,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-	// StreamSubscription<BarometerEvent> _streamSubscription = StreamSubscription<BarometerEvent>;
 	StreamSubscription<BarometerEvent> _streamSubscription;
 	double _barometerValue;
 
@@ -28,7 +27,6 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     _streamSubscription = barometerEvents.listen((BarometerEvent event) {
-			print(event);
       setState(() {
         _barometerValue = event.pressure;
       });

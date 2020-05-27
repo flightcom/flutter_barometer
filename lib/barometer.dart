@@ -19,7 +19,7 @@ class BarometerEvent {
   final double pressure;
 
   @override
-  String toString() => '[BarometerEvent (pressure: $pressure)]';
+  String toString() => '[Barometer Event (pressure: $pressure)]';
 }
 
 Stream<BarometerEvent> _barometerEvents;
@@ -29,11 +29,7 @@ Stream<BarometerEvent> get barometerEvents {
   if (_barometerEvents == null) {
     _barometerEvents = _barometerEventChannel
         .receiveBroadcastStream()
-        .map(
-            (dynamic event) {
-							// print(event.toString());
-							return BarometerEvent(event);
-						});
+        .map((dynamic event) => BarometerEvent(event));
   }
   return _barometerEvents;
 }
