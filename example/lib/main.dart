@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-		final String accelerometer = _barometerValue.toStringAsFixed(3);
+		final String accelerometer = _barometerValue?.toStringAsFixed(3);
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
