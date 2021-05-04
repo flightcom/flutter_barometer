@@ -16,16 +16,16 @@ class BarometerEvent {
   ///
   /// When the device is held upright facing the user, positive values mean the
   /// device is moving to the right and negative mean it is moving to the left.
-  final double pressure;
+  final double? pressure;
 
   @override
   String toString() => '[Barometer Event (pressure: $pressure)]';
 }
 
-Stream<BarometerEvent> _barometerEvents;
+Stream<BarometerEvent>? _barometerEvents;
 
 /// A broadcast stream of events from the device barometer.
-Stream<BarometerEvent> get barometerEvents {
+Stream<BarometerEvent>? get barometerEvents {
   if (_barometerEvents == null) {
     _barometerEvents = _barometerEventChannel
         .receiveBroadcastStream()
